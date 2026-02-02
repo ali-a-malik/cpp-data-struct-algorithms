@@ -1,8 +1,11 @@
 #include "Point.h"
+#include "Point3D.h"
 #include <iostream>
 using namespace std;
 
 int main() {
+    // Part 1
+    cout<<"Part 1\n"<<endl;
     // Test default constructor
     Point p1;
     cout << "p1 initial: ";
@@ -32,5 +35,26 @@ int main() {
     cout << "p1 x = " << p1.getX() << endl;
     cout << "p1 y = " << p1.getY() << endl;
 
+
+    cout<<"\n\n\n";
+
+     // Part 2: Testing Point3D
+    cout<<"Part 2\n"<<endl;
+    Point3D p3;
+    cout << "p3 initial: " << p3 << endl;
+
+    Point3D p4(1.0, 2.0, 3.0);
+    cout << "p4 initial: " << p4 << endl;
+
+    p4.move(1.0, -1.0, 2.0);
+    cout << "p4 after move: " << p4 << endl;
+
+    p4.setZ(10.0);
+    cout << "p4 after setZ: " << p4 << endl;
+
+    cout << "p4 z = " << p4.getZ() << endl;
+
     return 0;
+
+
 }

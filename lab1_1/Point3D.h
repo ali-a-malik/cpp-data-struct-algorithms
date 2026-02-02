@@ -3,7 +3,6 @@
 
 #include "Point.h"
 #include <iostream>
-using namespace std;
 
 class Point3D:public Point {
     protected:
@@ -12,9 +11,10 @@ class Point3D:public Point {
         Point3D();
         Point3D(double x, double y, double z);
 
-        void move();
-
-        friend ostream& operator<<(ostream& out, const Point3D& point);
+        void move(double xInc, double yInc, double zInc);
+        double getZ() const;
+        void setZ(double z);
+        friend std::ostream& operator<<(std::ostream& out, const Point3D& point);
         
 };
 
