@@ -3,6 +3,14 @@
 #include <iostream>
 using namespace std;
 
+double distance3D(Point3D p1, Point3D p2) {
+    double dx = p2.getX() - p1.getX();
+    double dy = p2.getY() - p1.getY();
+    double dz = p2.getZ() - p1.getZ();
+
+    return sqrt(dx*dx + dy*dy + dz*dz);
+}
+
 int main() {
     // Part 1
     cout<<"Part 1\n"<<endl;
@@ -54,7 +62,29 @@ int main() {
 
     cout << "p4 z = " << p4.getZ() << endl;
 
-    return 0;
 
+    cout<<"\n\n\n";
+    //Part 3: Distance between two points
+    cout<<"Part 3\n"<<endl;
+
+    double x1, y1, z1;
+    double x2, y2, z2;
+
+    cout << "\nEnter the x, y, and z coordinates of your point: ";
+    cin >> x1 >> y1 >> z1;
+
+    Point3D a(x1, y1, z1);
+    cout << "\nHere is your point: " << a << endl;
+
+    cout << "\nEnter the x, y, and z coordinates of your next point: ";
+    cin >> x2 >> y2 >> z2;
+
+    Point3D b(x2, y2, z2);
+    cout << "\nHere is your point: " << b << endl;
+
+    double dist = distance3D(a, b);
+    cout << "\nThe distance between both points is: " << dist << endl;
+
+    return 0;
 
 }
