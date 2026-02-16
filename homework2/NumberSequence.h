@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+
 class NumberSequence {
     private:
         int length;
@@ -11,13 +13,6 @@ class NumberSequence {
     public:
         NumberSequence();
         void next_value(double nv);
-        // length increases at first call 
-        // last is assigned to nv 
-        // sum is updated
-        // update average is called (don't need but cleaner)
-        // average will call get_sum and divide that by get_length
-        // min value eval function
-        // max value eval function
 
         int get_length() const {return length;}
         double get_last() const {return last;}
@@ -29,7 +24,9 @@ class NumberSequence {
         void update_average();
         void update_min(double next_val);
         void update_max(double next_val);
+
         NumberSequence operator+(const NumberSequence& numseq) const;
-
-
 };
+
+// Output operator declaration
+std::ostream& operator<<(std::ostream& out, const NumberSequence& ns);
