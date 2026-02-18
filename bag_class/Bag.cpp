@@ -46,10 +46,6 @@ Bag::size_type Bag::erase_copies(const value_type& target){
     return count;
 }
 
-Bag::size_type Bag::size() const {
-    return used;
-}
-
 void Bag::operator +=(const Bag& addend) {
     assert((used + addend.used) <= CAPACITY);
     copy(addend.data, addend.data+addend.used, data+used);
