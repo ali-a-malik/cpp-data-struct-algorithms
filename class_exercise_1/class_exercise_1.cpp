@@ -9,6 +9,8 @@ int main() {
     ptr_z = &z;
     cin>>*ptr_x;
     cin>>*ptr_y;
-    
+
+    z = *ptr_x + *ptr_y;
+    cout << *ptr_z;
 
 }
