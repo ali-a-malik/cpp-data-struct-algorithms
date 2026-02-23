@@ -4,9 +4,7 @@
 using namespace std;
 
 int main(){
-    // -------------------
     // Create arr1
-    // -------------------
     int arr1[20];
 
     for(int i = 0; i < 20; i++) {
@@ -18,4 +16,17 @@ int main(){
         cout << arr1[i] << " ";
     }
     cout << endl << endl;
+
+    // Exercise 1: Copy all to arr2
+    int arr2[20];
+
+    copy(arr1, arr1 + 20, arr2);
+
+    cout << "arr2: ";
+    for(int i = 0; i < 20; i++) {
+        cout << arr2[i] << " ";
+    }
+    cout << endl << endl;
 }
+
+
